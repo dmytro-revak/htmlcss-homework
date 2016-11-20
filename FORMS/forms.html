@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Forms</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        fieldset {
+            border: 1px solid grey;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        label {
+            width: 150px;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="main">
+            <div id="container">
+                <div id="content" role="main">
+                    <form class="orderForm" action="index.html" method="post">
+                        <h1>Order Form</h1>
+                        <fieldset class="generalInfo">
+                            <legend>General info</legend>
+                            <div class="email">
+                                <label for="text1">Email</label>
+                                <input type="text" name="email" value="" id="text1" required placeholder="your@email.com">
+                            </div>
+                            <div class="login">
+                                <label for="text2">Login</label>
+                                <input type="text" name="login" value="" id="text2" required placeholder="Loign" pattern="[A-Za-z1-3]+$">
+                            </div>
+                            <div class="password">
+                                <label for="text3">Password</label>
+                                <input type="password" name="password" value="" id="text3" required placeholder="Password">
+                            </div>
+                        </fieldset>
+                        <fieldset class="userInfo">
+                            <legend>User Info</legend>
+                            <div class="firstName">
+                                <label for="text4">First Name</label>
+                                <input type="text" name="firstName" value="" id="text4" required placeholder="John" pattern="[a-zA-Z]+$">
+                            </div>
+                            <div class="secondName">
+                                <label for="text5">Second Name</label>
+                                <input type="text" name="secondName" value="" id="text5" required placeholder="Doe" pattern="[a-zA-Z]+$">
+                            </div>
+                            <div class="gender">
+                                <label for="gender">Gender</label> Male <input type="checkbox" name="gender" value="male" checked required id="gender"> Female <input type="checkbox" name="gender" value="female">
+                            </div>
+                            <div class="age">
+                                <label for="age">Age</label>
+                                <input type="text" name="age" value="" id="age" required placeholder="32">
+                            </div>
+                            <div class="aboutMe">
+                                <label for="aboutMe">About me</label>
+                                <textarea name="aboutMe" rows="8" cols="40" required id="aboutMe"></textarea>
+                            </div>
+                        </fieldset>
+                        <fieldset class="orderInfo">
+                            <legend>Order Info</legend>
+                            <div class="product">
+                                <label for="product">Product</label>
+                                <select class="product" name="product" required id="product">
+                                <option value="" disabled hidden>First option</option>
+                                <option value="iPhone" selected>iPhone</option>
+                                <option value="samsung">Samsung</option>
+                                <option value="lenovo">Lenovo</option>
+                              </select>
+                            </div>
+                            <div class="frontColor">
+                                <label for="frontColor">Front Color</label> Black
+                                <input type="radio" name="frontColor" value="Black" required checked id="frontColor"> Pink
+                                <input type="radio" name="frontColor" value="Pink"> Gold
+                                <input type="radio" name="frontColor" value="Gold">
+                            </div>
+                            <div class="backSideColor">
+                                <label for="backSideColor">Back-side Color</label>
+                                <input type="color" name="color" value="" id="backSideColor" disabled>
+                            </div>
+                            <div class="amount">
+                                <label for="amount">Amount</label>
+                                <input type="text" name="amount" value="" required placeholder="5" id="amount">
+                            </div>
+                            <div class="deliveryDate">
+                                <label for="deliveryDate">Delivery Date</label>
+                                <input type="text" name="deliveryDate" value="mm/dd/yyyy" required id="deliveryDate" readonly>
+                            </div>
+                        </fieldset>
+                        <input type="reset" value="Reset">
+                        <input type="submit" value="Submit">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
